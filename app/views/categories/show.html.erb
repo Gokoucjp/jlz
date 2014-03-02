@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>名称:</b>
   <%= @category.name %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>描述:</b>
   <%= @category.description %>
 </p>
 
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to '编辑', edit_category_path(@category) %> |
+<%= link_to '后退', categories_path %>
