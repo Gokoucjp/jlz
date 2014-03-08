@@ -1,5 +1,11 @@
 Jlz::Application.routes.draw do
   resources :categories
+  resources :picture
+  resources :home
+
+  match 'uploader' => 'uploader#new'
+  match 'uploader/upload' => 'uploader#upload'
+  match 'm' => 'categories#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

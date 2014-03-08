@@ -1,0 +1,17 @@
+<div>
+<%= form_tag({action: :upload}, multipart:true) do %>
+	<div>
+		<%= file_field_tag 'picture' %>
+	</div>
+	<div>
+		<%= label_tag '显示名称(默认与文件名相同)' %>
+		<%= text_field_tag 'name' %>
+	</div>
+	<div>
+		<%= collection_select(:category, :id, Category.all, :id, :name) %>
+	</div>
+	<div>
+		<%= submit_tag "上传" %>
+	</div>
+<% end %>
+</div>

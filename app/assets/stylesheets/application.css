@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+.main {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.no_float {
+	clear: both;
+}

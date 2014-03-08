@@ -1,0 +1,9 @@
+<%= form_for @picture do |f| %>
+	<div>
+		<%= f.label :name, "显示名称"%>
+		<%= f.text_field :name %>
+	</div>
+	<div>
+		<%= f.select :category, options_for_select(Category.all.map{|c| [c.name, c.id]}, selected: @picture.category) %>
+	</div>
+<% end %>

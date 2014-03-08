@@ -1,0 +1,20 @@
+<%= render 'header' %>
+<%= render 'sidebar' %>
+<div class="home_pic_container">
+	<div class="breadcrumb">当前位置 - <%= @current_category.name %></div>
+	<ul>
+		<% @pictures.each do |p| %>
+			<li class="home_pic">
+			<div>
+				<a href="<%= p.path%>" title="<%= p.name %>" target="_blank">
+					<%= image_tag p.path, class:'home_img' %>
+				</a>
+			</div>
+			<div class="pic_name">
+				<%= p.name %>
+			</div>
+			</li>
+		<% end %>
+		<div class="no_float"></div>
+	</ul>
+</div>

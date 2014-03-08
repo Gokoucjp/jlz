@@ -1,3 +1,94 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+	width: 980px;
+	height: 180px;
+	.contact {
+		float:right;
+		p {
+			margin: 0 2px;
+		}
+	}
+}
+
+.sidebar {
+	float:left;
+	width: 150px;
+	height: 480px;
+	font-size: 14px;
+	background-color: #00AFF0;
+	ul {
+		list-style:none;	
+		margin:0;
+		padding:0;
+		li {
+			height: 45px;
+			line-height: 43px;
+			a {
+				color: #ffffff;
+				display: block;
+				text-decoration: none;
+				height: 43px;
+				padding-left: 22px;
+				border-bottom: 1px solid #e2e8ed;
+				border-top: 1px solid #f7f7f9;
+				&:hover {
+					color: #ffffff;
+					font-size: 16px;
+					text-decoration: none;
+					background-color: #1570a6;
+					border-top:none;
+					padding-top: 1px;
+					background-position: 114px 19px;
+				}
+			}
+			.selected {
+				color: #ffffff;
+				font-size: 16px;
+				text-decoration: none;
+				background-color: #1570a6;
+				border-top:none;
+				padding-top: 1px;
+				background-position: 114px 19px;
+			}
+		}
+	}
+}
+
+.home_pic_container {
+	width: 830px;
+	float: left;
+	.breadcrumb {
+		color: #ababab;
+		margin-left: 10px;
+	}
+	ul {
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-left: 10px;
+		padding-top: 0px;
+		list-style: none;
+		li.home_pic {
+			float:left;
+			margin-left: 10px;
+			margin-top: 10px;
+			width: 180px;
+			weight: 260px;
+			list-style: none;
+			a {
+				width: 180px;
+				height: 220px;
+				display: block
+			}
+			.home_img {
+				width: 180px;
+				height: 220px;
+			}
+			.pic_name {
+				text-align: center;
+			}
+		}
+	
+	}
+}

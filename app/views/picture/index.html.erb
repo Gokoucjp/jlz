@@ -1,0 +1,6 @@
+<div>
+	<% @pictures.each do |p| %>
+		<%= image_tag p.path, alt: p.name, class: "list_picture"%>
+		<%= link_to 'edit', edit_picture_path(p) %>
+	<% end %>
+</div>
