@@ -1,7 +1,14 @@
 <div>
 	<% @pictures.each do |p| %>
-		<%= image_tag p.path, alt: p.name, class: "list_picture"%>
-		<%= link_to 'edit', edit_picture_path(p) %>
-		<%= link_to 'delete', p, method: :delete, data: { confirm: '确定要删除吗?' } %>
+		<div class="pic_container">
+			<div>
+				<%= image_tag p.path, alt: p.name, class: "list_picture"%>
+			</div>
+			<div>
+				类别:<%= Category.find(p.category).name %>
+				<%= link_to '修改名称', edit_picture_path(p) %>
+				<%= link_to '删除', p, method: :delete, data: { confirm: '确定要删除吗?' } %>
+			</div>
+		</div>
 	<% end %>
 </div>

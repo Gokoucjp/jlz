@@ -2,8 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.list_picture
-{
-	width: 20px;
-	height: 20px;
+.pic_container {
+	width: 180px;
+	height: 260px;
+	float: left;
+	.list_picture
+	{
+		width: 180px;
+		height: 220px;
+	}
 }
