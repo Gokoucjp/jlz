@@ -22,7 +22,7 @@ class UploaderController < ApplicationController
 		path = picture_show_path uploaded_picture.original_filename, category_id
 		picture = Picture.new(category: category_id, name: name, path: path)
 		if picture.save
-			redirect_to picture
+			redirect_to uploader_url
 		end
 	end
 end

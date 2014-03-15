@@ -122,3 +122,46 @@
 	
 	}
 }
+
+.index {
+	width: 820px;
+	margin-left: 10px;
+	float: left;
+	background-color: #fff;
+	.index_content {
+		padding: 10px;
+		color: #3a4450;
+		p {
+			margin: 0 0 10px;
+		}
+	}
+	.index_header {
+		background-color: #5FB435;
+		padding: 6px 10px;
+		h3 {
+			background: url('category.png') no-repeat left center;
+			display: inline-block;
+			color: #fff;
+			padding-left: 24px;
+		}
+		a.more {
+			display: inline-block;
+			float: right;
+			background: url('more.png') no-repeat left center;
+			color: #fff;
+			line-height: 27px;
+			padding-left: 20px;
+			margin-right: 10px;
+		}
+	}
+	.pic_item {
+		display: inline-block;
+		margin-left: 10px;
+		margin-top: 10px;
+		img {
+			width: 178px;
+			height: 220px;
+			border: 1px solid #eee;
+		}
+	}
+}

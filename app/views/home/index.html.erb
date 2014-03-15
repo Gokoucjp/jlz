@@ -1,1 +1,28 @@
 <%= render 'sidebar' %>
+<div class="index">
+	<div>
+	<div class="index_header">
+		<h3>公司简介</h3>
+	</div>
+		<div class="index_content">
+			<p><%= Info.first.description %> </p>
+		</div>
+	<div>
+	<% Category.all.each do |category| %>
+		<div>
+		<div class="index_header">
+			<h3><%= category.name %></h3>
+			<%= link_to '更多', { action: 'show', id: category.id}, class: 'more' %>
+		</div>
+		<div class="pic_list">
+			<% Picture.find_all_by_category(category.id, order: 'created_at', limit: 4).each do |p| %>
+				<div class="pic_item">
+					<a href="<%= p.path%>" title="<%= p.name %>" target="_blank">
+											<%= image_tag p.path%>
+					</a>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	<% end %>
+</div>

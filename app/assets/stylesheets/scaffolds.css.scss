@@ -12,6 +12,13 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+h3 {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 27px;
+	margin: 0;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -19,14 +26,13 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   &:visited {
     color: #666;
   }
   &:hover {
     color: #fff;
-    background-color: #000;
   }
 }
 
