@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jlz</title>
+	<title><%= Info.first.name %></title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+	<meta name="keyword" content="景隆泽,印务,印刷,奖杯,奖牌,宣传报">
+	<meta name="description" content="<%= Info.first.description %>">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
