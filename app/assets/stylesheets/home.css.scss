@@ -31,9 +31,21 @@
 .sidebar {
 	float:left;
 	width: 150px;
-	height: 480px;
+	height: 830px;
 	font-size: 14px;
-	background-color: #00AFF0;
+	background-color: #359BED;
+	.sidebar_menu_1 {
+		a {
+			background: url('home.png') no-repeat 5% 50%;
+			text-indent: 1em;
+			display: block;
+			padding: 18px 22px;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 22px;
+			color: #fff;
+		}
+	}
 	ul {
 		list-style:none;	
 		margin:0;
@@ -50,20 +62,20 @@
 				border-bottom: 1px solid #e2e8ed;
 				border-top: 1px solid #f7f7f9;
 				&:hover {
-					color: #ffffff;
+					color: #fff;
 					font-size: 16px;
 					text-decoration: none;
-					background-color: #1570a6;
+					background-color: #00AFF0;
 					border-top:none;
 					padding-top: 1px;
 					background-position: 114px 19px;
 				}
 			}
 			.selected {
-				color: #ffffff;
+				color: #20202f;
 				font-size: 16px;
 				text-decoration: none;
-				background-color: #1570a6;
+				background-color: #fff;
 				border-top:none;
 				padding-top: 1px;
 				background-position: 114px 19px;
@@ -74,7 +86,9 @@
 
 .home_pic_container {
 	width: 830px;
+	height: 830px;
 	float: left;
+	background-color: #fff;
 	.breadcrumb {
 		color: #ababab;
 		margin-left: 10px;
