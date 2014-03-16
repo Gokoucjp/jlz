@@ -2,6 +2,7 @@ Jlz::Application.routes.draw do
   resources :categories
   resources :picture
   resources :home
+  resources :info
 
   match 'uploader' => 'uploader#new'
   match 'uploader/upload' => 'uploader#upload'
