@@ -23,8 +23,10 @@ class PictureController < ApplicationController
 
 	def destroy
 		@picture = Picture.find(params[:id])
-		@picture.destroy
-		redirect_to picture_index_url
+		delete_picture @picture.path
+		if @picture.destroy
+			redirect_to picture_index_url
+		end
 	end
 
 end
