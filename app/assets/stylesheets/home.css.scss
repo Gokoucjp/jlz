@@ -2,168 +2,190 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .header {
-	width: 980px;
-	height: 280px;
-	background-image:url("header.jpg");
-	background-repeat: no-repeat;
-	background-position: 48% 45%;
-	margin-top: -8px;
-	margin-bottom: 10px;
-	.logo {
-		img {
-			width: 114px;
-			height: 98px;
-		}
-		position: absolute;
-		margin-left: 10px;
-		margin-top: 5px;
-	}
-	.contact {
-		float:right;
-		margin-right: 10px;
-		margin-top: 3px;
-		p {
-			margin: 0 2px;
-			font-size: 16px;
-			line-height: 18px;
-		}
-	}
+  width: 980px;
+  height: 280px;
+  background-image: url("header.jpg");
+  background-repeat: no-repeat;
+  background-position: 48% 45%;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  .logo {
+    img {
+      width: 114px;
+      height: 98px;
+    }
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .contact {
+    float: right;
+    margin-right: 10px;
+    margin-top: 3px;
+    p {
+      margin: 0 2px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
 }
 
 .sidebar {
-	float:left;
-	width: 150px;
-	height: 830px;
-	font-size: 14px;
-	background-color: #359BED;
-	.sidebar_menu_1 {
-		a {
-			background: url('home.png') no-repeat 5% 50%;
-			text-indent: 1em;
-			display: block;
-			padding: 18px 22px;
-			font-size: 18px;
-			font-weight: 600;
-			line-height: 22px;
-			color: #fff;
-		}
-	}
-	ul {
-		list-style:none;	
-		margin:0;
-		padding:0;
-		li {
-			height: 45px;
-			line-height: 43px;
-			a {
-				color: #ffffff;
-				display: block;
-				text-decoration: none;
-				height: 43px;
-				padding-left: 22px;
-				border-bottom: 1px solid #e2e8ed;
-				border-top: 1px solid #f7f7f9;
-				&:hover {
-					color: #fff;
-					font-size: 16px;
-					text-decoration: none;
-					background-color: #00AFF0;
-					border-top:none;
-					padding-top: 1px;
-					background-position: 114px 19px;
-				}
-			}
-			.selected {
-				color: #20202f;
-				font-size: 16px;
-				text-decoration: none;
-				background-color: #fff;
-				border-top:none;
-				padding-top: 1px;
-				background-position: 114px 19px;
-			}
-		}
-	}
+  float: left;
+  width: 150px;
+  height: 830px;
+  font-size: 14px;
+  background-color: #359BED;
+  .sidebar_menu_1 {
+    a {
+      background: url('home.png') no-repeat 5% 50%;
+      text-indent: 1em;
+      display: block;
+      padding: 18px 22px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #fff;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      height: 45px;
+      line-height: 43px;
+      a {
+        color: #ffffff;
+        display: block;
+        text-decoration: none;
+        height: 43px;
+        padding-left: 22px;
+        border-bottom: 1px solid #e2e8ed;
+        border-top: 1px solid #f7f7f9;
+        &:hover {
+          color: #fff;
+          font-size: 16px;
+          text-decoration: none;
+          background-color: #00AFF0;
+          border-top: none;
+          padding-top: 1px;
+          background-position: 114px 19px;
+        }
+      }
+      .selected {
+        color: #20202f;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: #fff;
+        border-top: none;
+        padding-top: 1px;
+        background-position: 114px 19px;
+      }
+    }
+  }
 }
 
 .home_pic_container {
-	width: 830px;
-	height: 830px;
-	float: left;
-	background-color: #fff;
-	.breadcrumb {
-		color: #ababab;
-		margin-left: 10px;
-	}
-	ul {
-		padding-left: 0px;
-		margin-top: 0px;
-		margin-left: 10px;
-		padding-top: 0px;
-		list-style: none;
-		li.home_pic {
-			float:left;
-			margin-left: 10px;
-			margin-top: 10px;
-			width: 180px;
-			weight: 260px;
-			list-style: none;
-			a {
-				width: 180px;
-				height: 220px;
-				display: block
-			}
-			.home_img {
-				width: 180px;
-				height: 220px;
-			}
-			.pic_name {
-				text-align: center;
-			}
-		}
-	
-	}
+  width: 830px;
+  height: 830px;
+  float: left;
+  background-color: #fff;
+  .breadcrumb {
+    color: #ababab;
+    margin-left: 10px;
+  }
+  ul {
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-left: 10px;
+    padding-top: 0px;
+    list-style: none;
+    li.home_pic {
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 180px;
+      weight: 260px;
+      list-style: none;
+      a {
+        width: 180px;
+        height: 220px;
+        display: block
+      }
+      .home_img {
+        width: 180px;
+        height: 220px;
+      }
+      .pic_name {
+        text-align: center;
+      }
+    }
+
+  }
 }
 
 .index {
-	width: 820px;
-	margin-left: 10px;
-	float: left;
-	background-color: #fff;
-	.index_content {
-		padding: 10px;
-		color: #3a4450;
-		p {
-			margin: 0 0 10px;
-		}
-	}
-	.index_header {
-		background-color: #5FB435;
-		padding: 6px 10px;
-		h3 {
-			background: url('category.png') no-repeat left center;
-			display: inline-block;
-			color: #fff;
-			padding-left: 24px;
-		}
-		a.more {
-			display: inline-block;
-			float: right;
-			background: url('more.png') no-repeat left center;
-			color: #fff;
-			line-height: 27px;
-			padding-left: 20px;
-			margin-right: 10px;
-		}
-	}
-	.pic_item {
-		display: inline-block;
-		margin-left: 10px;
-		margin-top: 10px;
-		img {
-			width: 178px;
-			height: 220px;
-			border: 1px solid #eee;
-		}
-	}
+  width: 820px;
+  margin-left: 10px;
+  float: left;
+  background-color: #fff;
+  .index_content {
+    padding: 10px;
+    color: #3a4450;
+    p {
+      margin: 0 0 10px;
+    }
+  }
+  .index_header {
+    background-color: #5FB435;
+    padding: 6px 10px;
+    h3 {
+      background: url('category.png') no-repeat left center;
+      display: inline-block;
+      color: #fff;
+      padding-left: 24px;
+    }
+    a.more {
+      display: inline-block;
+      float: right;
+      background: url('more.png') no-repeat left center;
+      color: #fff;
+      line-height: 27px;
+      padding-left: 20px;
+      margin-right: 10px;
+    }
+  }
+  .pic_item {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    img {
+      width: 178px;
+      height: 220px;
+      border: 1px solid #eee;
+    }
+  }
+}
+
+.pagination {
+  margin: 20px 0 10px 20px;
+  a {
+    padding: 6px 12px;
+    color: #428bca;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    &:hover {
+      color: #fff;
+      background-color: #4390df;
+    }
+  }
+  em.current {
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #4390df;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+  }
 }
