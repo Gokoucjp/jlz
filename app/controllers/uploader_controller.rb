@@ -16,7 +16,10 @@ class UploaderController < ApplicationController
 
 		File.open(dir, 'wb') do |file|
 			file.write(uploaded_picture.read)
-		end
+    end
+
+    image_optim = ImageOptim.new(:jpegoptim => {max_quality: 20})
+    image_optim.optimize_image! dir
 
 		# store in database
 		path = picture_show_path uploaded_picture.original_filename, category_id
