@@ -64,7 +64,7 @@ class CategoriesController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+        format.json { render json: @category.errors, status: :unprocessable_entitye }
       end
     end
   end
@@ -74,10 +74,19 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
+    delete_all_picture @category.id
 
     respond_to do |format|
       format.html { redirect_to categories_url }
       format.json { head :no_content }
     end
   end
+
+  private
+  def delete_all_picture category_id
+    Picture.find_all_by_category(category_id).each do |p|
+      delete_picture p.path
+    end
+  end
+
 end
