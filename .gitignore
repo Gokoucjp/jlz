@@ -11,7 +11,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/public/upload
+/public/upload/*
 
 
 database.yml
