@@ -1,15 +1,15 @@
 <%= render 'sidebar' %>
 <div class="index">
 	<div>
-	<div class="index_header">
-		<h3>公司简介</h3>
-	</div>
+		<div class="index_header">
+			<h3>公司简介</h3>
+		</div>
 		<div class="index_content">
 			<p><%= Info.first.description %> </p>
 		</div>
-	<div>
+	</div>
 	<% Category.all.each do |category| %>
-		<div>
+	<div>
 		<div class="index_header">
 			<h3><%= category.name %></h3>
 			<%= link_to '更多', { action: 'show', id: category.id}, class: 'more' %>
