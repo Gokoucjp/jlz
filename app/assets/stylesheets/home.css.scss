@@ -1,96 +1,123 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$page_width: 960px;
 .header {
-  width: 980px;
-  height: 280px;
+  width: $page_width;
+  height: 252px;
   background-image: url("header.jpg");
   background-repeat: no-repeat;
-  background-position: 48% 45%;
-  margin-top: -8px;
-  margin-bottom: 10px;
-  .logo {
-    img {
-      width: 114px;
-      height: 98px;
-    }
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 5px;
-  }
-  .contact {
-    float: right;
-    margin-right: 10px;
-    margin-top: 3px;
-    p {
-      margin: 0 2px;
-      font-size: 16px;
-      line-height: 18px;
+}
+
+.menu {
+  $menu_height: 62px;
+  $menu_count: 6;
+
+  width: $page_width;
+  height: $menu_height;
+  ul {
+    width: $page_width;
+    height: $menu_height;
+    background-image: url("menu.jpg");
+    background-repeat: no-repeat;
+    list-style: none;
+    margin: 0px auto;
+    padding: 0px 0px 0px 140px;
+    text-align: center;
+    li {
+      float: left;
+      height: $menu_height;
+      width: ($page_width - 140px)/$menu_count;
+      a {
+        width: ($page_width - 140px)/$menu_count;
+        height: $menu_height;
+        line-height: $menu_height;
+        color: #ffffff;
+        font-size: 20px;
+        display: block;
+
+        &.selected, &:hover {
+          background-image: url("menu_selected.png");
+          background-position: 40% 80%;
+          background-repeat: no-repeat;
+        }
+      }
     }
   }
 }
 
 .sidebar {
   float: left;
-  width: 150px;
+  width: 160px;
   height: 830px;
   font-size: 14px;
-  background-color: #359BED;
-  .sidebar_menu_1 {
-    a {
-      background: url('home.png') no-repeat 5% 50%;
-      text-indent: 1em;
-      display: block;
-      padding: 18px 22px;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 22px;
-      color: #fff;
-    }
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      height: 45px;
-      line-height: 43px;
+  background-image: url("side.png");
+  background-repeat: no-repeat;
+  background-position: -13px 0px;
+  margin-top: -190px;
+  .sidebar_content {
+    margin-top: 220px;
+    .sidebar_menu_1 {
       a {
-        color: #ffffff;
+        background: url('home.png') no-repeat 5% 50%;
+        text-indent: 1em;
         display: block;
-        text-decoration: none;
-        height: 43px;
-        padding-left: 22px;
-        border-bottom: 1px solid #e2e8ed;
-        border-top: 1px solid #f7f7f9;
-        &:hover {
-          color: #fff;
+        padding: 18px 22px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        color: #000000;
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        height: 45px;
+        line-height: 50px;
+        a {
+          color: #000000;
           font-size: 16px;
+          display: block;
           text-decoration: none;
-          background-color: #00AFF0;
-          border-top: none;
-          padding-top: 1px;
-          background-position: 114px 19px;
+          width: 160px;
+          height: 50px;
+          padding-left: 22px;
+          border-bottom: 1px solid #e2e8ed;
+          border-top: 1px solid #f7f7f9;
+          &.selected, &:hover {
+            color: #000000;
+            font-size: 18px;
+            text-decoration: none;
+            background-image: url("sidebar_selected.png");
+            background-position: -165px -60px;
+            border-top: none;
+            padding-top: 1px;
+          }
         }
       }
-      .selected {
-        color: #20202f;
-        font-size: 16px;
-        text-decoration: none;
-        background-color: #fff;
-        border-top: none;
-        padding-top: 1px;
-        background-position: 114px 19px;
-      }
+    }
+  }
+
+  .sidebar_contact {
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 0px 0px 10px 10px;
+    .title {
+      font-size: 18px;
+      color: #000000;
+      font-weight: 600;
     }
   }
 }
 
 .home_pic_container {
-  width: 830px;
+  width: 800px;
   height: 830px;
   float: left;
   background-color: #fff;
+  margin-top: 45px;
   .breadcrumb {
     color: #ababab;
     margin-left: 10px;
@@ -106,7 +133,6 @@
       margin-left: 10px;
       margin-top: 10px;
       width: 180px;
-      weight: 260px;
       list-style: none;
       a {
         width: 180px;
@@ -126,15 +152,16 @@
 }
 
 .index {
-  width: 820px;
-  margin-left: 10px;
+  width: 800px;
   float: left;
   background-color: #fff;
+  margin-top: 45px;
   .index_content {
     padding: 10px;
     color: #3a4450;
     p {
       margin: 0 0 10px;
+      font-size: 16px;
     }
   }
   .index_header {

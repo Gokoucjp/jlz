@@ -1,16 +1,19 @@
 <div class="sidebar">
-	<div class="sidebar_menu_1">
-		<a href='/'>首页</a>
-	</div>
-	<ul>
-		<% Category.all.each do |category| %> 
-			<li>
-			<% if category.id.to_s != params[:id] %>
-				<%= link_to category.name, action: 'show', id: category.id %>
-			<% else %>
-				<%= link_to category.name, { action: 'show'}, id: category.id, class: "selected" %>
-			<% end %>
-			</li>
-		<% end %>
-	</ul>
+  <div class="sidebar_content">
+    <div class="sidebar_menu_1">
+      <a href='/'>首页</a>
+    </div>
+    <ul>
+      <% Category.all.each do |category| %>
+          <li>
+            <% if category.id.to_s != params[:id] %>
+                <%= link_to category.name, action: 'show', id: category.id %>
+            <% else %>
+                <%= link_to category.name, {action: 'show'}, id: category.id, class: 'selected' %>
+            <% end %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+  <%= render 'contact'%>
 </div>

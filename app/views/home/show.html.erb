@@ -1,7 +1,8 @@
+<%= render :partial => 'menu', :locals => {:selected => @selected_id} %>
 <%= render 'sidebar' %>
 <div class="home_pic_container">
   <div class="breadcrumb">当前位置 - <%= @current_category.name %></div>
-  <%= will_paginate @pictures, previous_label: "« 上一页", next_label: "下一页 »" %>
+  <%= will_paginate @pictures, previous_label: '« 上一页', next_label: '下一页 »' %>
   <ul>
     <% @pictures.each do |p| %>
         <li class="home_pic">
