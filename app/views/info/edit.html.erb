@@ -5,7 +5,7 @@
   </div>
   <div class="field">
     <%= f.label :description, '简介' %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :phone, 'phone'%><br/>
@@ -23,6 +23,14 @@
     <%= f.label :qq, 'QQ' %><br />
     <%= f.text_field :qq %>
   </div>
+    <div class="field">
+      <%= f.label :customer_resource, '客户资源' %><br />
+      <%= f.text_area :customer_resource %>
+    </div>
+    <div class="field">
+      <%= f.label :team, '公司团队' %><br />
+      <%= f.text_area :team %>
+    </div>
 
   <div class="actions">
     <%= f.submit '提交'%>
