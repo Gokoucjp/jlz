@@ -1,0 +1,17 @@
+<%= render :partial => 'menu', :locals => {:selected_id => @selected_id} %>
+<%= render 'sidebar' %>
+<div class="home_pic_container">
+  <div class="breadcrumb">当前位置 - 联系我们</div>
+  <div class="text_content">
+    <h4>名称</h4>
+    <p><%=Info.first.name%></p>
+    <h4>地址</h4>
+    <p><%=Info.first.address%></p>
+    <h4>电话</h4>
+    <p><%=Info.first.phone%></p>
+    <h4>QQ</h4>
+    <p><%=Info.first.qq%></p>
+    <h4>邮箱</h4>
+    <p><%=Info.first.email%></p>
+  </div>
+</div>

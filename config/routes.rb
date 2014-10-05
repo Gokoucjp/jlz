@@ -8,6 +8,10 @@ Jlz::Application.routes.draw do
   match 'uploader/upload' => 'uploader#upload'
   match 'm' => 'categories#index'
   match 'description' => 'home#description'
+  match 'customer' => 'home#customer_resource'
+  match 'product' => 'home#product'
+  match 'team' => 'home#team'
+  match 'contact' => 'home#contact_us'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

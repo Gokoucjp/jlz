@@ -13,7 +13,27 @@ class HomeController < ApplicationController
     @current_category = Category.find(params[:id])
   end
 
+  def product
+    @selected_id = 2
+    @pictures = Picture.order('created_at DESC')
+    .paginate(page: params[:page], per_page: 12)
+    render 'index'
+  end
+
   def description
     @selected_id = 1
   end
+
+  def customer_resource
+    @selected_id = 3
+  end
+
+  def team
+    @selected_id = 4
+  end
+
+  def contact_us
+    @selected_id = 5
+  end
+
 end

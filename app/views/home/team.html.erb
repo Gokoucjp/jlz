@@ -1,9 +1,8 @@
 <%= render :partial => 'menu', :locals => {:selected_id => @selected_id} %>
 <%= render 'sidebar' %>
 <div class="home_pic_container">
-  <div class="breadcrumb">当前位置 - 公司简介</div>
+  <div class="breadcrumb">当前位置 - 公司团队</div>
   <div class="text_content">
-    <p><%= Info.first.description %> </p>
+    <p><%= Info.first.team %> </p>
   </div>
-</div>
 </div>
